@@ -9,7 +9,7 @@ const Text = () => {
       whileInView={{opacity:1,scale:1,transition:{
         duration:1
       }}}
-      className=" text-[30px] leading-10">
+      className="text-[26px]  xl:text-[30px] lg:text-[26px] leading-10">
         Sequi pariatur. Laboriosam modi so aperiam for non. Nesciunt unde
         dolorem, yet dolor. Voluptatem tempora or consequuntur natus
         consequatur. Quam ullam. Modi fugiat so ratione irure and modi labore
@@ -22,7 +22,8 @@ const Text = () => {
         duration:1
       }
       }}
-      className="  text-[39px]  border-b-[1px] border-black xl:w-[44%] lg:w-[44%] md:w-[80%] mt-7">
+      className=" text-[28px] xl:text-[39px] lg:text-[30px]  border-b-[1px]
+       border-black w-[60%] xl:w-[44%] lg:w-[54%] md:w-[50%] mt-7">
         <Link to="/contact"> Let's work together</Link>
       </motion.p>
     </div>
