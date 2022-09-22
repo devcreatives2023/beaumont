@@ -8,11 +8,13 @@ const navbarsmallscreen = {
     opacity: 1,
     y: 90,
   },
-  close: { opacity: 0, y: 0,
-  transition:{
-    duration:1,
-  ease: "easeInOut"
-  }
+  close: {
+    opacity: 0,
+    y: 0,
+    transition: {
+      duration: 1,
+      ease: "easeInOut",
+    },
   },
 };
 
@@ -21,26 +23,26 @@ const Navbar = () => {
   const [show, setShow] = React.useState(false);
   return (
     <div className=" flex justify-between ">
-      <div className="flex gap-10">
+      <div className="flex  xl:gap-10 lg:gap-10 md:gap-10">
         <div className=" text-logo"> TechBoom </div>
         <div className="invisible xl:visible lg:visible md:visible">
           <ul className="flex  gap-7 text-[1.2rem] capitalize mt-3 ">
             <li
               onClick={() => setActive("work")}
-              className={Active === "work" ? " border-b-2 border-black" : ""}
+              className={Active === "work" ? " border-b-2 border-black" : " hover:text-[gray] "}
             >
               <Link to=""> work </Link>
             </li>
             <li
               onClick={() => setActive("about")}
-              className={Active === "about" ? " border-b-2 border-black" : ""}
+              className={Active === "about" ? " border-b-2 border-black" : " hover:text-[gray] "}
             >
               <Link to=""> about</Link>
             </li>
             <li
               onClick={() => setActive("contract")}
               className={
-                Active === "contract" ? " border-b-2 border-black" : ""
+                Active === "contract" ? " border-b-2 border-black" : " hover:text-[gray] "
               }
             >
               <Link to=""> contract </Link>
@@ -49,7 +51,7 @@ const Navbar = () => {
         </div>
       </div>
       <div>
-        <ul className=" flex gap-7 text-[1.2rem] capitalize mt-3 invisible xl:visible lg:visible md:visible">
+        <ul className="absolute right-[52px] flex gap-7 text-[1.2rem] capitalize mt-3 invisible xl:visible lg:visible md:visible">
           <motion.li
             whileHover={{ color: "brown", scale: "1.1" }}
             transition={{ duration: "0.8s", ease: "easeInOut" }}
@@ -70,7 +72,7 @@ const Navbar = () => {
         </ul>
       </div>
       {/* small  screen */}
-      <motion.div  className="visible xl:invisible lg:invisible md:invisible">
+      <motion.div className="visible xl:invisible lg:invisible md:invisible">
         <motion.div
           initial={{ scale: 1, rotate: 0, opacity: 0.9 }}
           whileHover={{
@@ -82,42 +84,41 @@ const Navbar = () => {
               type: "spring",
             },
           }}
-          className="flex justify-center   items-center text-logo cursor-pointer"
+          className="flex justify-center items-center text-logo cursor-pointer"
           onClick={() => setShow(!show)}
         >
           {show ? <icons.AiOutlineClose /> : <icons.HiMenuAlt4 />}
         </motion.div>
-
-          <motion.ul
-          initial={{y:0,opacity:0}}
+        <motion.ul
+          initial={{ y: 0, opacity: 0 }}
           variants={navbarsmallscreen}
-          animate={show? "open" : "close"}
-          className=" fixed  w-[100%] h-[100%] left-0 right-0 justify-center flex flex-col items-center 
+          animate={show ? "open" : "close"}
+          className=" fixed  w-[100%] h-[100%] left-0 right-0 pt-10 flex flex-col items-center 
           text-logo bg-white z-10"
-          >
-            <li className="border-b-2 border-[brown] hover:text-[grey]">
-              <Link to="">Work</Link>
+        >
+          <li className="border-b-2 border-[brown] hover:text-[grey]">
+            <Link to="">Work</Link>
+          </li>
+          <li className="border-b-2 border-[brown] hover:text-[grey]">
+            <Link to="">About</Link>
+          </li>
+          <li className="border-b-2 border-[brown] hover:text-[grey]">
+            <Link to="">Contract</Link>
+          </li>
+          <div className=" flex mt-10 gap-2">
+            <li className="text-[grey] hover:text-[brown]">
+              <a href="">
+                <icons.BsInstagram />
+              </a>
             </li>
-            <li className="border-b-2 border-[brown] hover:text-[grey]">
-              <Link to="">About</Link>
+            <li className="text-[grey] hover:text-[brown]">
+              <a href="">
+                <icons.BsTwitter />
+              </a>
             </li>
-            <li className="border-b-2 border-[brown] hover:text-[grey]">
-              <Link to="">Contract</Link>
-            </li>
-            <div className="flex gap-6 mt-10 mr-auto items-center ">
-              <li className="text-[grey] hover:text-[brown]">
-                <a href="">
-                  <icons.BsInstagram />
-                </a>
-              </li>
-              <li className="text-[grey] hover:text-[brown]">
-                <a href="">
-                  <icons.BsTwitter />
-                </a>
-              </li>
-            </div>
-          </motion.ul>
-          </motion.div>
+          </div>
+        </motion.ul>
+      </motion.div>
     </div>
   );
 };
