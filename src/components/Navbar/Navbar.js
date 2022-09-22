@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { icons } from "../../constants";
+import { motion } from "framer-motion";
 const Navbar = () => {
 const [Active,setActive] =React.useState("home")
   return (
@@ -18,8 +19,14 @@ const [Active,setActive] =React.useState("home")
       </div>
       <div> 
           <ul className=" flex gap-7 text-[1.2rem] capitalize mt-3">
-          <li><a href=""><icons.BsInstagram/> </a> </li>
-          <li><a href=""><icons.BsTwitter/> </a> </li>
+          <motion.li whileHover={{color:"brown",scale:"1.1"}}
+           transition={{duration:"0.8s",ease:"easeInOut"}}
+          ><a href=""><icons.BsInstagram/> </a> </motion.li>
+          
+           <motion.li whileHover={{color:"brown",scale:"1.1"}}
+           transition={{duration:"0.8s",ease:"easeInOut"}}>
+           <a href=""><icons.BsTwitter/> </a> 
+           </motion.li>
           </ul>
          </div>
     </div>

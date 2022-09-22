@@ -1,18 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { motion } from "framer-motion";
 const Text = () => {
   return (
-    <div className="mt-[120px] xl:w-[50%] lg:w-[50%] md:w-[60%]">
-      <p className=" text-[30px] leading-10">
+    <div className="mt-[120px] xl:w-[50%] lg:w-[50%] md:w-[60%]" >
+      <motion.p 
+      initial={{opacity:1,scale:0.9}}
+      whileInView={{opacity:1,scale:1,transition:{
+        duration:1
+      }}}
+      className=" text-[30px] leading-10">
         Sequi pariatur. Laboriosam modi so aperiam for non. Nesciunt unde
         dolorem, yet dolor. Voluptatem tempora or consequuntur natus
         consequatur. Quam ullam. Modi fugiat so ratione irure and modi labore
         tempor. 
-      </p>
-      <p className="  text-[39px]  border-b-[1px] border-black xl:w-[44%] lg:w-[44%] md:w-[80%] mt-7">
+      </motion.p>
+      <motion.p
+      initial={{opacity:0,x:-10}}
+      whileInView={{opacity:1,x:0,
+      transition:{
+        duration:1
+      }
+      }}
+      className="  text-[39px]  border-b-[1px] border-black xl:w-[44%] lg:w-[44%] md:w-[80%] mt-7">
         <Link to="/contact"> Let's work together</Link>
-      </p>
+      </motion.p>
     </div>
   );
 };
