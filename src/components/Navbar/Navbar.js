@@ -24,7 +24,7 @@ const Navbar = () => {
   return (
     <div className="flex xl:justify-between lg:justify-between md:justify-between justify-center  items-center">
       <div className="flex  xl:gap-10 lg:gap-10 md:gap-10">
-        <div className=" text-logo"> TechBoom </div>
+        <div className="lg:text-logo md:text-logo text-[20px] xl:text-logo"> TechBoom </div>
         <div className="invisible xl:visible lg:visible md:visible">
           <ul className="flex  gap-7 text-[1.2rem] capitalize mt-3 ">
             <li
