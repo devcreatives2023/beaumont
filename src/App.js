@@ -5,7 +5,7 @@ import { About, Contract, Work } from "./pages";
 
 const App = () => {
   return (
-    <div className=" font-main xl:p-main lg:p-main md:p-main p-2rem">
+    <div className=" font-main xl:p-main lg:p-main md:p-main p-[2rem]">
       <BrowserRouter>
       <Navbar />
         <Routes>
