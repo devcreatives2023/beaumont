@@ -22,7 +22,7 @@ const Navbar = () => {
   const [Active, setActive] = React.useState("home");
   const [show, setShow] = React.useState(false);
   return (
-    <div className=" flex justify-between ">
+    <div className="flex xl:justify-between lg:justify-between md:justify-between justify-center  items-center">
       <div className="flex  xl:gap-10 lg:gap-10 md:gap-10">
         <div className=" text-logo"> TechBoom </div>
         <div className="invisible xl:visible lg:visible md:visible">
