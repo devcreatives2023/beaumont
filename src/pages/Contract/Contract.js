@@ -13,7 +13,7 @@ const Contract = () => {
          whileInView={{opacity:1,x:0,transition:{
            duration:1
          }}}
-      className=" xl:text-[2rem] lg:text-[1.5rem] text-[1rem] capitalize tracking-wider">
+      className=" xl:text-[2rem] lg:text-[1.5rem] text-[1.3rem] capitalize tracking-wider">
         Cat ipsum dolor sit amet, velit, and eos. Do pariatur lorem. Magna ad
         yet.
       </motion.p>
@@ -95,7 +95,7 @@ const Contract = () => {
           ></textarea>
         </div>
 
-        <button className=" outline-none border-2 border-black p-5  xl:w-[18%] lg:w-[22%] w-[30%] capitalize mt-[30px] text-xl">
+        <button className=" outline-none border-2 border-black p-5  xl:w-[18%] lg:w-[22%] w-[40%] capitalize mt-[30px] text-xl">
           submit
         </button>
       </form>
