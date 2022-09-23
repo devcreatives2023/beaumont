@@ -17,7 +17,7 @@ const Categories = () => {
                 y: 0,
                 opacity: 1,
                 transition: {
-                  duration: 0.7,
+                  duration: 1,
                 },
               }}
             >
