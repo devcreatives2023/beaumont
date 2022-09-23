@@ -3,21 +3,19 @@ import { Link } from "react-router-dom";
 import { icons } from "../../constants";
 import { motion } from "framer-motion";
 
-const navbarsmallscreen = {
+const menuVariants = {
   open: {
-    opacity: 1,
-    y: 90,
+    top: 100,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.5
+    }
   },
   close: {
-    opacity: 0,
-    y: 0,
-    transition: {
-      duration: 1,
-      ease: "easeInOut",
-      type:"tween"
-    },
-  },
+    top: "-80vh"
+  }
 };
+
 
 const Navbar = () => {
   const [Active, setActive] = React.useState("home");
@@ -94,13 +92,13 @@ const Navbar = () => {
         </motion.div>
         <motion.ul
           initial={false}
-          variants={navbarsmallscreen}
+          variants={menuVariants}
           animate={show ? "open" : "close"}
-          className="mt-[-30px] fixed z-10 w-[100%] h-[40vh] left-0 right-0 
+          className=" fixed z-10 w-[100%] left-0 right-0 
           flex flex-col 
           items-center 
-          text-logo bg-white  
-          ">
+          text-logo bg-white p-4 mt-3
+          pb-[90px]">
           <li className="border-b-2 border-[brown] hover:text-[grey]">
             <Link to="/">Work</Link>
           </li>
