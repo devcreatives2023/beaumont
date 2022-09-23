@@ -21,7 +21,7 @@ const Category = () => {
               <img
                 src={item.img}
                 className="xl:h-[900px] lg:h-[800px] h-[500px] 
-              w-[100%] object-cover"
+                  w-[100%] object-cover"
               />
             </div>
           );
