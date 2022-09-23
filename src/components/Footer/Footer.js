@@ -29,7 +29,7 @@ const Footer = () => {
       whileInView={{opacity:1,y:0,transition:{
         duration:"0.8s",
         type:"spring",
-        delay:1.5
+        delay:1.2
       }}}
       className="flex items-center ">
         <a href=""> Made by Abrar  </a> <icons.BsHeart fontSize={12} className='m-1 mt-3 text-[#681717]' />
