@@ -7,7 +7,7 @@ module.exports = {
         main: "'EB Garamond', serif",
       },
       padding: {
-        main: "3rem 3.5rem",
+        main: "2.5rem 3.5rem",
       },
       fontSize:{
         logo:"2rem"

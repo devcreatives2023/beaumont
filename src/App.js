@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Footer, Navbar } from "./components";
-import { About, Contract, Work } from "./pages";
+import { About, Category, Contract, Work } from "./pages";
 
 const App = () => {
   return (
@@ -13,6 +13,7 @@ const App = () => {
             <Route index element={<Work />} />
             <Route path="about" element={<About />} />
             <Route path="contract" element={<Contract />} />
+            <Route path="category" element={<Category />} />
           </Route>
         </Routes>
         <Footer />

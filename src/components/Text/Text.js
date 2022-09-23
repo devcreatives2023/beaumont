@@ -23,7 +23,7 @@ const Text = () => {
       }
       }}
       className=" text-[28px] xl:text-[39px] lg:text-[30px]  border-b-[1px]
-       border-black w-[60%] xl:w-[44%] lg:w-[54%] md:w-[50%] mt-7">
+       border-black w-[80%] xl:w-[44%] lg:w-[54%] md:w-[50%] mt-7">
         <Link to="/contact"> Let's work together</Link>
       </motion.p>
     </div>

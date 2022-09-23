@@ -31,13 +31,13 @@ const Navbar = () => {
               onClick={() => setActive("work")}
               className={Active === "work" ? " border-b-2 border-black" : " hover:text-[gray] "}
             >
-              <Link to=""> work </Link>
+              <Link to="/"> work </Link>
             </li>
             <li
               onClick={() => setActive("about")}
               className={Active === "about" ? " border-b-2 border-black" : " hover:text-[gray] "}
             >
-              <Link to=""> about</Link>
+              <Link to="/about"> about</Link>
             </li>
             <li
               onClick={() => setActive("contract")}
@@ -45,13 +45,15 @@ const Navbar = () => {
                 Active === "contract" ? " border-b-2 border-black" : " hover:text-[gray] "
               }
             >
-              <Link to=""> contract </Link>
+              <Link to="/contract"> contract </Link>
             </li>
           </ul>
         </div>
       </div>
       <div>
-        <ul className="absolute right-[52px] flex gap-7 text-[1.2rem] capitalize mt-3 invisible xl:visible lg:visible md:visible">
+        <ul className="absolute right-[52px]  flex gap-4 
+        text-[1.2rem] capitalize  invisible xl:visible
+         lg:visible md:visible">
           <motion.li
             whileHover={{ color: "brown", scale: "1.1" }}
             transition={{ duration: "0.8s", ease: "easeInOut" }}
@@ -97,13 +99,13 @@ const Navbar = () => {
           text-logo bg-white z-10"
         >
           <li className="border-b-2 border-[brown] hover:text-[grey]">
-            <Link to="">Work</Link>
+            <Link to="/">Work</Link>
           </li>
           <li className="border-b-2 border-[brown] hover:text-[grey]">
-            <Link to="">About</Link>
+            <Link to="/about">About</Link>
           </li>
           <li className="border-b-2 border-[brown] hover:text-[grey]">
-            <Link to="">Contract</Link>
+            <Link to="/contract">Contract</Link>
           </li>
           <div className=" flex mt-10 gap-2">
             <li className="text-[grey] hover:text-[brown]">
