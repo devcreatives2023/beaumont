@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 const Text = () => {
   return (
-    <div className="mt-[120px] xl:w-[50%] lg:w-[50%] md:w-[60%]" >
+    <div 
+    className="mt-[120px] xl:w-[50%] lg:w-[50%] md:w-[60%]" >
       <motion.p 
       initial={{opacity:1,scale:0.9}}
       whileInView={{opacity:1,scale:1,transition:{

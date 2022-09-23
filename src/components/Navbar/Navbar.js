@@ -14,6 +14,7 @@ const navbarsmallscreen = {
     transition: {
       duration: 1,
       ease: "easeInOut",
+      type:"tween"
     },
   },
 };
@@ -52,8 +53,8 @@ const Navbar = () => {
       </div>
       <div>
         <ul className="absolute right-[52px]  flex gap-4 
-        text-[1.2rem] capitalize  invisible xl:visible
-         lg:visible md:visible">
+        text-[1.2rem] capitalize invisible xl:visible
+         lg:visible md:visible z-0 ">
           <motion.li
             whileHover={{ color: "brown", scale: "1.1" }}
             transition={{ duration: "0.8s", ease: "easeInOut" }}
@@ -92,12 +93,14 @@ const Navbar = () => {
           {show ? <icons.AiOutlineClose /> : <icons.HiMenuAlt4 />}
         </motion.div>
         <motion.ul
-          initial={{ y: 0, opacity: 0 }}
+          initial={false}
           variants={navbarsmallscreen}
           animate={show ? "open" : "close"}
-          className=" fixed  w-[100%] h-[100%] left-0 right-0 pt-10 flex flex-col items-center 
-          text-logo bg-white z-10"
-        >
+          className="mt-[-30px] fixed z-10 w-[100%] h-[40vh] left-0 right-0 
+          flex flex-col 
+          items-center 
+          text-logo bg-white  
+          ">
           <li className="border-b-2 border-[brown] hover:text-[grey]">
             <Link to="/">Work</Link>
           </li>

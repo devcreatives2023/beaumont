@@ -3,7 +3,7 @@ import {icons} from "../../constants";
 import { motion } from "framer-motion";
 const Footer = () => {
   return (
-    <div className="mt-[90px] text-[22px]">
+    <div className="mb-[40px] mt-[90px] text-[22px]">
       <motion.p
       initial={{opacity:0,y:15}}
       whileInView={{opacity:1,y:0,transition:{
